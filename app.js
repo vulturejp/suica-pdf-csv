@@ -257,6 +257,15 @@ function renderError(message) {
   elements.rows.replaceChildren(tr);
 }
 
+function renderEmpty() {
+  const tr = document.createElement("tr");
+  const td = cell("PDFを選択すると明細が表示されます。");
+  td.colSpan = 8;
+  td.className = "empty";
+  tr.append(td);
+  elements.rows.replaceChildren(tr);
+}
+
 function cell(value, className = "") {
   const td = document.createElement("td");
   td.textContent = value;
@@ -280,6 +289,6 @@ function resetOutput() {
   setMessage("PDFを選択");
   elements.summary.textContent = "";
   elements.resultSection.classList.add("is-empty");
-  elements.rows.replaceChildren();
+  renderEmpty();
   elements.downloadButton.disabled = true;
 }
