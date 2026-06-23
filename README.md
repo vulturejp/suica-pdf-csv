@@ -8,9 +8,9 @@ Demo: https://vulturejp.github.io/suica-pdf-csv/
 
 - PDFファイルや抽出結果を外部サーバーへ送信しません。
 - 変換処理はブラウザ内で完結します。
-- GitHub Pages にそのまま配置できます。
+- 生成済みの `dist/app.js` をGitHub Pagesにそのまま配置できます。
 - PDF解析には同梱した固定バージョンの PDF.js を使います。
-- ビルド手順は不要です。
+- アプリ本体は TypeScript で実装しています。
 
 ## 使い方
 
@@ -26,6 +26,26 @@ CSV列:
 
 ```csv
 month,day,type1,station1,type2,station2,balance,amount,raw
+```
+
+## 開発
+
+依存関係のインストール:
+
+```bash
+npm install
+```
+
+TypeScriptの型チェック:
+
+```bash
+npm run check
+```
+
+`src/app.ts` から `dist/app.js` を生成:
+
+```bash
+npm run build
 ```
 
 ## GitHub Pages

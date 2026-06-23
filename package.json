@@ -1,0 +1,27 @@
+{
+  "name": "suica-pdf-csv",
+  "version": "0.1.0",
+  "description": "モバイルSuicaの残高ご利用明細PDFをCSVへ変換する静的アプリです。",
+  "main": "dist/app.js",
+  "scripts": {
+    "test": "npm run check",
+    "build": "tsc",
+    "check": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vulturejp/suica-pdf-csv.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "AGPL-3.0-or-later",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/vulturejp/suica-pdf-csv/issues"
+  },
+  "homepage": "https://vulturejp.github.io/suica-pdf-csv/",
+  "devDependencies": {
+    "typescript": "^6.0.3"
+  },
+  "private": false
+}
